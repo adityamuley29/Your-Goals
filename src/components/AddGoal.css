@@ -1,0 +1,48 @@
+.AddGoal-Form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  margin: 20px; 
+  
+}
+.AddGoal-Form .form-heading{
+    color: #424874;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.AddGoal-Form .form-input {
+  position: relative;
+  width: 90%;
+  height: 30px;
+  outline: 2px solid #424874;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 4px 10px;
+  font-family: 'Raleway', sans-serif;   
+}
+.AddGoal-Form .form-input:focus {
+  /* background-color: #f4eeff; */
+  color: #424874;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  outline: 2px solid #424874;
+  transition: 0.1s ease-in-out;
+  font-family: 'Raleway', sans-serif;   
+}
+.AddGoal-Form .form-btn {
+  position: relative;
+  width: 20%;
+  height: 35px;
+  background-color: #424874;
+  border: none;
+  letter-spacing: 1px;
+  padding: 10px 10px;
+  margin-top: 20px;
+  font-family: 'Raleway', sans-serif;   
+  color: white;
+}
+.AddGoal-Form .form-btn:hover{
+    cursor: pointer;
+}

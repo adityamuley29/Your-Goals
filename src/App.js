@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import FormWrapper from "./ui/FormWrapper";
+import Goals from "./ui/Goals";
+
+const Initial_Goal = [];
 
 function App() {
+  const [finalGoal, setFinalGoal] = useState(Initial_Goal);
+
+  const recievedData = (RecievedData) => {
+    // console.log(RecievedData);
+    setFinalGoal((prevFinalGoal) => {
+      return setFinalGoal([RecievedData, ...prevFinalGoal]);
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <FormWrapper onRespondData={recievedData} />
+      <Goals goalItem={finalGoal} />
     </div>
   );
 }
