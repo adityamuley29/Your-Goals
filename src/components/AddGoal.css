@@ -34,7 +34,7 @@
 .AddGoal-Form .form-btn {
   position: relative;
   width: 20%;
-  height: 35px;
+  height: auto;
   background-color: #424874;
   border: none;
   letter-spacing: 1px;

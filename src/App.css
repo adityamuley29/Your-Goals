@@ -1,3 +1,7 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+
 .main {
   position: relative;
   /* border: 2px solid red; */
