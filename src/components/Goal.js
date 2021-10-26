@@ -9,9 +9,9 @@ function Goal(props) {
   }
 
   return (
-    <div className="goal-wrapper" key={props.data.id}>
+    <div className={props.mode === 'light'?"light-goal-wrapper":"dark-goal-wrapper"} key={props.data.id}>
       <p className="goal-heading">{props.data.goal}</p>
-      <button className="goal-delete" onClick={onDeleteHandler}>Delete</button>
+      <button className={props.mode === 'light'?"light-goal-delete":"dark-goal-delete"} onClick={onDeleteHandler} >Delete</button>
     </div>
   );
 }

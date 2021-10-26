@@ -1,13 +1,9 @@
 import React from "react";
 import "./Goals.css";
 import Goal from "../components/Goal";
+import done from "./allDone.gif";
 
-const getLocalItem = () => {
-  let list = localStorage.getItem("goals");
-  if (list) {
-    return JSON.parse(localStorage.getItem("goals"));
-  }
-};
+
 function Goals(props) {
   const goalsDeleteIndex = (i) => {
     props.deleteHandeler(i);
@@ -15,8 +11,8 @@ function Goals(props) {
 
   return (
     <>
-      {props.goalItem.length === 0 ? (
-        <h1>yoo...You are set to Rock!</h1>
+      {undefined !== props.goalItem && props.goalItem.length === 0 ? (
+       <img className="done-logo" src={done} alt="logo here"/>
       ) : (
         <div className="Goals-Wrapper">
           {props.goalItem.map((data, index) => {
@@ -26,6 +22,7 @@ function Goals(props) {
                 index={index}
                 data={data}
                 deleteGoal={goalsDeleteIndex}
+                mode={props.mode}
               />
             );
           })}

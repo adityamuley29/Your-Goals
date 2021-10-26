@@ -1,0 +1,77 @@
+.lightNavBar {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0px 40px;
+  width: auto;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  -webkit-box-shadow: 0 8px 6px -7px black;
+  -moz-box-shadow: 0 8px 6px -7px black;
+  box-shadow: 0 8px 6px -7px black;
+  z-index: 1;
+}
+.darkNavBar {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0px 40px;
+  width: auto;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #222831;
+  -webkit-box-shadow: 0 8px 6px -7px #EEEEEE;
+  -moz-box-shadow: 0 8px 6px -7px #EEEEEE;
+  box-shadow: 0 8px 6px -7px #EEEEEE;
+  z-index: 1;
+}
+
+.lightNavBar .light-navbar-left p {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: grey;
+}
+.darkNavBar .dark-navbar-left p {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.darkModeContainer {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.darkModeContainer .dark-Mode-btn {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 6px 10px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.darkModeContainer .light-Mode-btn {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 6px 10px;
+  background-color: #424874;
+  color: white;
+  border: none;
+}
+.darkModeContainer .dark-Mode-btn:hover {
+  cursor: pointer;
+}
+.darkModeContainer .light-Mode-btn:hover {
+  cursor: pointer;
+}

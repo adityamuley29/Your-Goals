@@ -8,10 +8,9 @@ function Wrapper(props) {
 
     }
 
-
     return (
-        <div className="wrapper">
-            <AddGoal formData={fetchedData}/>
+        <div className={props.mode === 'light'?"light-wrapper":"dark-wrapper"}>
+            <AddGoal formData={fetchedData} mode={props.mode}  />
         </div>
     )
 }

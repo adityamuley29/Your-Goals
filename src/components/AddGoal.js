@@ -23,13 +23,16 @@ function AddGoal(props) {
 
   }
 
+
+
   return (
     <div className="AddGoal-Form">
+      <h2 className={props.mode === 'light' ? "light-form-heading" : "dark-form-heading"}>What's your plan for the Today?</h2>
       <form onSubmit={onSubmitHandeler} >
-        <h2 className="form-heading">What to do Today?</h2>
-        <input value={enteredGoal} required onChange={goalChangeHandeler} placeholder="Add your Goal here..." className="form-input" />
-        <button type="submit" className="form-btn">Add Goal</button>
+        <input value={enteredGoal} required onChange={goalChangeHandeler} placeholder="Add your Goal here..." className={props.mode === 'light' ?"light-form-input":"dark-form-input"} />
+        <button type="submit" className={props.mode === 'light'?"light-form-btn":"dark-form-btn"}>Add Goal</button>
       </form>
+      {/* <button>Enable Dark Mode</button> */}
     </div>
   );
 }

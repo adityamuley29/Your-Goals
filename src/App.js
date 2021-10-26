@@ -1,13 +1,35 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Navbar from "./components/NavBar/Navbar";
 import FormWrapper from "./ui/FormWrapper";
 import Goals from "./ui/Goals";
 
 const Initial_Goal = [];
 
+//getting data from local storage
+// const getLocalItem = () => {
+//   let list = localStorage.getItem("goals");
+//   if (list) {
+//     return JSON.parse(localStorage.getItem("goals"));
+//   }
+// };
 
 function App() {
   const [finalGoal, setFinalGoal] = useState(Initial_Goal);
+
+  const [isDarkMode, setisDarkMode] = useState('light');
+
+  //toggleMode  Function
+  const toggleMode = () => {
+    if(isDarkMode === 'light')
+    {
+      setisDarkMode('dark')
+
+    }
+    else{
+      setisDarkMode('light')
+    }
+  };
 
   //create goal handeler
   const recievedData = (RecievedData) => {
@@ -18,8 +40,8 @@ function App() {
 
   //add goals to local storage
   useEffect(() => {
-    localStorage.setItem('goals', JSON.stringify(finalGoal));
-  }, [finalGoal]);
+    localStorage.setItem("goals", JSON.stringify(finalGoal));
+  });
 
   // delete goal handeler
   const onDeleteHandeler = (deleteIndex) => {
@@ -29,11 +51,16 @@ function App() {
       return setFinalGoal([...prevUpdatedGoal]);
     });
   };
+
+  
   return (
-    <div className="main">
-      <FormWrapper onRespondData={recievedData} />
-      <Goals goalItem={finalGoal} deleteHandeler={onDeleteHandeler} />
-    </div>
+    <>
+      <Navbar mode={isDarkMode} toggleMode={toggleMode} />
+      <div className={isDarkMode==='light'?"light-main":"dark-main"}>
+        <FormWrapper onRespondData={recievedData} mode={isDarkMode} />
+        <Goals goalItem={finalGoal} deleteHandeler={onDeleteHandeler} mode={isDarkMode} />
+      </div>
+    </>
   );
 }
 

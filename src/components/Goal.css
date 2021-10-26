@@ -1,4 +1,4 @@
-.goal-wrapper {
+.light-goal-wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -10,30 +10,63 @@
   width: 90%;
   height: auto;
 }
+.dark-goal-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222831;
+  /* color: white; */
+  align-items: center;
+  margin: 10px 20px;
+  /* padding: 10px 0px; */
+  /* border: 2px solid red; */
+  width: 90%;
+  height: auto;
+}
 .goal-heading {
   color: white;
   padding: 0px 10px;
   word-spacing: 1px;
-  
 }
 
-.goal-delete {
+.light-goal-delete {
   margin: 0px 10px;
   position: relative;
   height: auto;
   width: auto;
-  padding: 6px 10px ;
+  padding: 6px 10px;
   border: none;
   background-color: #424874;
   color: white;
   font-weight: bold;
   letter-spacing: 0.8px;
 }
+.dark-goal-delete {
+  margin: 0px 10px;
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 6px 10px;
+  border: none;
+  background-color: #393E46;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
 
-.goal-delete:hover {
+.light-goal-delete:hover {
   cursor: pointer;
   border: none;
-  background-color: #F4EEFF;
-  transition: .2s;
+  background-color: #f4eeff;
+  transition: 0.2s;
   color: red;
+  font-weight: bold;
+}
+.dark-goal-delete:hover {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  transition: 0.2s;
+  color: red;
+  font-weight: bold;
 }
