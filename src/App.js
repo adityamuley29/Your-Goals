@@ -4,18 +4,18 @@ import Navbar from "./components/NavBar/Navbar";
 import FormWrapper from "./ui/FormWrapper";
 import Goals from "./ui/Goals";
 
-const Initial_Goal = [];
+// const Initial_Goal = [];
 
 //getting data from local storage
-// const getLocalItem = () => {
-//   let list = localStorage.getItem("goals");
-//   if (list) {
-//     return JSON.parse(localStorage.getItem("goals"));
-//   }
-// };
+const getLocalItem = () => {
+  let list = localStorage.getItem("goals");
+  if (list) {
+    return JSON.parse(localStorage.getItem("goals"));
+  }
+};
 
 function App() {
-  const [finalGoal, setFinalGoal] = useState(Initial_Goal);
+  const [finalGoal, setFinalGoal] = useState(getLocalItem);
 
   const [isDarkMode, setisDarkMode] = useState('light');
 
