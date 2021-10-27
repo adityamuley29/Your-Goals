@@ -9,6 +9,10 @@ function Goals(props) {
     props.deleteHandeler(i);
   };
 
+  const completedItem = (item)=>{
+    props.isCompleted(item)
+  }
+
   return (
     <>
       {undefined !== props.goalItem && props.goalItem.length === 0 ? (
@@ -19,8 +23,8 @@ function Goals(props) {
             return (
               <Goal
                 key={index}
-                index={index}
                 data={data}
+                completedItem={completedItem}
                 deleteGoal={goalsDeleteIndex}
                 mode={props.mode}
               />

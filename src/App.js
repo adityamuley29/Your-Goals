@@ -52,13 +52,30 @@ function App() {
     });
   };
 
+  const isCompleted = (item)=>{
+    setFinalGoal(
+      finalGoal.map((e)=>{
+        if(e.id === item.id )
+        {
+          return{
+            ...e,
+            complete : !e.complete,
+          };
+        }
+        return e;
+      })
+    )
+    console.log(finalGoal);
+    
+  }
+
   
   return (
     <>
       <Navbar mode={isDarkMode} toggleMode={toggleMode} />
       <div className={isDarkMode==='light'?"light-main":"dark-main"}>
         <FormWrapper onRespondData={recievedData} mode={isDarkMode} />
-        <Goals goalItem={finalGoal} deleteHandeler={onDeleteHandeler} mode={isDarkMode} />
+        <Goals goalItem={finalGoal} isCompleted={isCompleted} deleteHandeler={onDeleteHandeler} mode={isDarkMode} />
       </div>
     </>
   );

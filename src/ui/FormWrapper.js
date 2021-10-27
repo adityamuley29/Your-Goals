@@ -1,18 +1,17 @@
-import React from 'react'
-import AddGoal from '../components/AddGoal'
-import "./FormWrapper.css"
+import React from "react";
+import AddGoal from "../components/AddGoal";
+import "./FormWrapper.css";
 
 function Wrapper(props) {
-    const fetchedData = (FormData)=>{
-        props.onRespondData(FormData);
+  const fetchedData = (FormData) => {
+    props.onRespondData(FormData);
+  };
 
-    }
-
-    return (
-        <div className={props.mode === 'light'?"light-wrapper":"dark-wrapper"}>
-            <AddGoal formData={fetchedData} mode={props.mode}  />
-        </div>
-    )
+  return (
+    <div className={props.mode === "light" ? "light-wrapper" : "dark-wrapper"}>
+      <AddGoal formData={fetchedData} mode={props.mode} />
+    </div>
+  );
 }
 
-export default Wrapper
+export default Wrapper;
