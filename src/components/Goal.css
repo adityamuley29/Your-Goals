@@ -1,117 +1,258 @@
-.light-goal-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  background-color: #424874;
-  align-items: center;
-  margin: 10px 20px;
-  /* padding: 10px 0px; */
-  /* border: 2px solid red; */
-  width: 90%;
-  height: 7vh;
-}
-.dark-goal-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  background-color: #222831;
-  /* color: white; */
-  align-items: center;
-  margin: 10px 20px;
-  /* padding: 10px 0px; */
-  /* border: 2px solid red; */
-  width: 90%;
-  height: 7vh;
-}
-.goal-heading {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  padding: 0px 10px;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-}
-.completed-goal-heading {
-  text-decoration: line-through;
-  color: rgba(255, 255, 255, 0.315);
-  padding: 0px 10px;
-  word-spacing: 1px;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+@media only screen and (min-width: 780px) {
+  .light-goal-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #424874;
+    align-items: center;
+    margin: 10px 20px;
+    /* padding: 10px 0px; */
+    /* border: 2px solid red; */
+    width: 90%;
+    max-height: 7vh;
+  }
+  .dark-goal-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222831;
+    /* color: white; */
+    align-items: center;
+    margin: 10px 20px;
+    /* padding: 10px 0px; */
+    /* border: 2px solid red; */
+    width: 90%;
+    max-height: 7vh;
+  }
+  .goal-heading {
+    width: 80%;
+    overflow: scroll;
+    /* font-size: 20px; */
+    font-weight: bold;
+    color: white;
+    padding: 0px 10px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+  }
+  .goal-heading::-webkit-scrollbar {
+    display: none;
+  }
+  .completed-goal-heading {
+    width: 80%;
+    overflow: scroll;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.315);
+    padding: 0px 10px;
+    word-spacing: 1px;
+    /* font-size: 20px; */
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .completed-goal-heading::-webkit-scrollbar {
+    display: none;
+  }
 
-.Action-buttons{
-  position: relative;
-  display: flex;
-  /* padding:10px; */
-  width: auto;
-  height: 80%;
-  /* border: 2px solid red; */
-}
-.Action-buttons .light-Complete-btn{
-  background: none;
-  border: none;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-.Action-buttons .light-Complete-btn:hover{
-  cursor: pointer;
-  background-color: #F4EEFF;
-  transition: .2s;
-}
-.Action-buttons .dark-Complete-btn{
-  background-color: #393E46;
-  border: none;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  transition: .2s;
-}
-.Action-buttons .dark-Complete-btn:hover{
-  cursor: pointer;
-  background-color: white;
-}
+  .Action-buttons {
+    position: relative;
+    display: flex;
+    /* padding:10px; */
+    width: auto;
+    height: 30px;
+    /* border: 2px solid red; */
+  }
+  .Action-buttons .light-Complete-btn {
+    background: none;
+    border: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    /* padding: 6px 2px; */
+  }
+  .Action-buttons .light-Complete-btn:hover {
+    cursor: pointer;
+    background-color: #f4eeff;
+    transition: 0.2s;
+  }
+  .Action-buttons .dark-Complete-btn {
+    background-color: #393e46;
+    border: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+  }
+  .Action-buttons .dark-Complete-btn:hover {
+    cursor: pointer;
+    background-color: white;
+  }
 
-.light-goal-delete {
-  margin: 0px 10px;
-  position: relative;
-  height: auto;
-  width: auto;
-  padding: 6px 10px;
-  border: none;
-  background-color: #424874;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-}
-.dark-goal-delete {
-  margin: 0px 10px;
-  position: relative;
-  height: auto;
-  width: auto;
-  padding: 6px 10px;
-  border: none;
-  background-color: #393E46;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-}
+  .light-goal-delete {
+    margin: 0px 10px;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 6px 10px;
+    border: none;
+    background-color: #424874;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+  .dark-goal-delete {
+    margin: 0px 10px;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 6px 10px;
+    border: none;
+    background-color: #393e46;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
 
-.light-goal-delete:hover {
-  cursor: pointer;
-  border: none;
-  background-color: #f4eeff;
-  transition: 0.2s;
-  color: red;
-  font-weight: bold;
+  .light-goal-delete:hover {
+    cursor: pointer;
+    border: none;
+    background-color: #f4eeff;
+    transition: 0.2s;
+    color: red;
+    font-weight: bold;
+  }
+  .dark-goal-delete:hover {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    transition: 0.2s;
+    color: red;
+    font-weight: bold;
+  }
 }
-.dark-goal-delete:hover {
-  cursor: pointer;
-  border: none;
-  background-color: white;
-  transition: 0.2s;
-  color: red;
-  font-weight: bold;
+@media only screen and (max-width: 780px) {
+  .light-goal-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #424874;
+    align-items: center;
+    margin: 10px 0px;
+    width: 100%;
+    height: 6vh;
+  }
+  .dark-goal-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222831;
+    align-items: center;
+    margin: 10px 0px;
+    width: 100%;
+    height: 6vh;
+  }
+  .goal-heading {
+    width: 60%;
+    overflow: scroll;
+    /* font-size: 20px; */
+    font-weight: bold;
+    color: white;
+    padding: 0px 10px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+  }
+  .goal-heading::-webkit-scrollbar {
+    display: none;
+  }
+  .completed-goal-heading {
+    width: 60%;
+    overflow: scroll;
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.315);
+    padding: 0px 10px;
+    word-spacing: 1px;
+    /* font-size: 20px; */
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .completed-goal-heading::-webkit-scrollbar {
+    display: none;
+  }
+
+  .Action-buttons {
+    position: relative;
+    display: flex;
+    /* padding:10px; */
+    width: auto;
+    height: 30px;
+    /* border: 2px solid red; */
+  }
+  .Action-buttons .light-Complete-btn {
+    background: none;
+    border: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .Action-buttons .light-Complete-btn:hover {
+    cursor: pointer;
+    background-color: #f4eeff;
+    transition: 0.2s;
+  }
+  #doneLogo {
+    width: 20px;
+  }
+  .Action-buttons .dark-Complete-btn {
+    background-color: #393e46;
+    border: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+  }
+  .Action-buttons .dark-Complete-btn:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+
+  .light-goal-delete {
+    margin: 0px 10px;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 6px 10px;
+    border: none;
+    background-color: #424874;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+  .dark-goal-delete {
+    margin: 0px 10px;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 6px 10px;
+    border: none;
+    background-color: #393e46;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+
+  .light-goal-delete:hover {
+    cursor: pointer;
+    border: none;
+    background-color: #f4eeff;
+    transition: 0.2s;
+    color: red;
+    font-weight: bold;
+  }
+  .dark-goal-delete:hover {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    transition: 0.2s;
+    color: red;
+    font-weight: bold;
+  }
 }
